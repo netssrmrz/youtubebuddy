@@ -1,9 +1,9 @@
 package rs.android.ui;
-import android.view.*;
-import android.widget.*;
-import android.graphics.drawable.*;
-import android.widget.GridLayout.*;
-import android.graphics.*;
+//import android.view.*;
+//import android.widget.*;
+//import android.graphics.drawable.*;
+//import android.widget.GridLayout.*;
+//import android.graphics.*;
 
 public class Util
 {
@@ -434,4 +434,17 @@ public class Util
     res=new android.graphics.PointF(pts[0], pts[1]);
     return res;
   }
+  
+  public static void Set_Button_Colour
+    (android.widget.Button button, Integer colour)
+  {
+    android.graphics.PorterDuffColorFilter filter;
+
+    if (colour != null)
+    {
+      filter = new android.graphics.PorterDuffColorFilter
+        (colour, android.graphics.PorterDuff.Mode.SRC_ATOP);
+      button.getBackground().setColorFilter(filter);
+    }
+	}
 }

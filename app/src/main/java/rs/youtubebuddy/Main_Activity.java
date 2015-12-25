@@ -9,6 +9,15 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener,
 android.view.View.OnClickListener,
 android.content.DialogInterface.OnClickListener
 {
+  public static final int COLOR_RED=0xff884444;
+  public static final int COLOR_GREEN=0xff339933;
+  public static final int COLOR_BLUE=0xff555599;
+  public static final int COLOR_YELLOW=0xff336633;
+  public static final int COLOR_PURPLE=0xff884488;
+  public static final int COLOR_CYAN=0xff555577;
+  public static final int COLOR_GREY=0xff444444;
+  public static final int COLOR_WHITE=0xffdddddd;
+  
   public static final int BUTTONID_MARKSTART=1;
   public static final int BUTTONID_MARKEND=2;
   public static final int BUTTONID_SEEKSTART=3;
@@ -41,149 +50,88 @@ android.content.DialogInterface.OnClickListener
     builder.setTitle("URL");
     builder.setView(url_input);
     builder.setPositiveButton("Ok", this);
-    /*new android.content.DialogInterface.OnClickListener() 
-     {
-     public void onClick(android.content.DialogInterface dialog, int id) 
-     {
-     String url;
-
-     url = url_input.getText().toString();
-     if (url.startsWith("https://youtu.be/"))
-     url = url.substring(17);
-     if (player==null)
-     player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
-     player.cueVideo(url);
-     }
-     });*/
-    builder.setNegativeButton
-    ("Cancel", null
-     /*new android.content.DialogInterface.OnClickListener() 
-      {
-      public void onClick(android.content.DialogInterface dialog, int id) 
-      {
-      // User cancelled the dialog
-      }
-      }*/);
+    builder.setNegativeButton("Cancel", null);
     return builder.create();
   }
 
   public android.view.View Build_Portrait_Layout()
   {
-    android.widget.LinearLayout main_view, buttons_view;
-    android.widget.Button button;
+    android.widget.LinearLayout main_view, buttons_view, control_panel;
     android.widget.LinearLayout.LayoutParams l;
 
-    main_view = new android.widget.LinearLayout(this);
-    main_view.setOrientation(android.widget.LinearLayout.VERTICAL);
-
     this.Build_PlayerView();
-    //player_view = 
-    //new com.google.android.youtube.player.YouTubePlayerView(this);
-    //player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
-    main_view.addView
-    (player_view,
-     new android.widget.LinearLayout.LayoutParams(
-       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 85));
-
+    
+    l = new android.widget.LinearLayout.LayoutParams(
+      0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 1);
+      
+    control_panel=new android.widget.LinearLayout(this);
+    control_panel.setOrientation(android.widget.LinearLayout.VERTICAL);
+    control_panel.setBackground
+      (new android.graphics.drawable.GradientDrawable
+        (android.graphics.drawable.GradientDrawable.Orientation.TOP_BOTTOM,
+          new int[]{0xff000000, COLOR_GREY}));
+    
     // counter details
     buttons_view = new android.widget.LinearLayout(this);
     buttons_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    l = new android.widget.LinearLayout.LayoutParams(
-      android.widget.LinearLayout.LayoutParams.WRAP_CONTENT, 
-      android.widget.LinearLayout.LayoutParams.WRAP_CONTENT);
-    l.gravity = android.view.Gravity.CENTER;
-    l.leftMargin = 40;
-    counter_text = new android.widget.TextView(this);
+    counter_text = this.Build_Counter();
     buttons_view.addView(counter_text, l);
-    start_text = new android.widget.TextView(this);
+    start_text = this.Build_Counter();
     buttons_view.addView(start_text, l);
-    end_text = new android.widget.TextView(this);
+    end_text = this.Build_Counter();
     buttons_view.addView(end_text, l);
-    main_view.addView
+    control_panel.addView
     (buttons_view,
      new android.widget.LinearLayout.LayoutParams(
-       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 5));
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
 
     // seek buttons
     buttons_view = new android.widget.LinearLayout(this);
     buttons_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    l = new android.widget.LinearLayout.LayoutParams(
-      0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 1);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SETFILE);
-    button.setText("Load...");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKSTART);
-    button.setText("|<");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKBACKWARDS);
-    button.setText("<<");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_PLAY);
-    button.setText(">");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKFORWARDS);
-    button.setText(">>");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKEND);
-    button.setText(">|");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    main_view.addView
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_SEEKBACKWARDS, "<<", COLOR_YELLOW), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_PLAY, ">", COLOR_GREEN), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), l);
+    control_panel.addView
     (buttons_view,
      new android.widget.LinearLayout.LayoutParams(
-       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 5));
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
 
     // mark buttons
     buttons_view = new android.widget.LinearLayout(this);
     buttons_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_MARKSTART);
-    button.setText("Mark Start");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_MARKEND);
-    button.setText("Mark End");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_CLEARSTART);
-    button.setText("Clear Start");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_CLEAREND);
-    button.setText("Clear End");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    main_view.addView
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_MARKSTART, "Mark Start", COLOR_BLUE), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_MARKEND, "Mark End", COLOR_BLUE), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_CLEARSTART, "Clear Start", COLOR_CYAN), l);
+    buttons_view.addView
+      (this.Build_Button(BUTTONID_CLEAREND, "Clear End", COLOR_CYAN), l);
+    control_panel.addView
     (buttons_view,
      new android.widget.LinearLayout.LayoutParams(
-       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 5));
-
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
+       
+    main_view = new android.widget.LinearLayout(this);
+    main_view.setOrientation(android.widget.LinearLayout.VERTICAL);
+    main_view.addView
+    (player_view,
+     new android.widget.LinearLayout.LayoutParams(
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 70));
+    main_view.addView
+    (control_panel,
+     new android.widget.LinearLayout.LayoutParams(
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 30));
+       
     return main_view;
   }
 
@@ -197,110 +145,101 @@ android.content.DialogInterface.OnClickListener
 
   public android.view.View Build_Landscape_Layout()
   {
-    android.widget.LinearLayout main_view, buttons_view;
-    android.widget.Button button;
-    android.widget.LinearLayout.LayoutParams l;
+    android.widget.LinearLayout main_view, buttons_view, buttons_panel;
+    android.widget.LinearLayout.LayoutParams lh, lw;
 
     main_view = new android.widget.LinearLayout(this);
     main_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
 
     this.Build_PlayerView();
-    //player_view = 
-    //new com.google.android.youtube.player.YouTubePlayerView(this);
-    //player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
     main_view.addView
     (player_view,
      new android.widget.LinearLayout.LayoutParams(
-       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 80));
+       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 70));
 
     buttons_view = new android.widget.LinearLayout(this);
     buttons_view.setOrientation(android.widget.LinearLayout.VERTICAL);
+    buttons_view.setBackground
+      (new android.graphics.drawable.GradientDrawable
+        (android.graphics.drawable.GradientDrawable.Orientation.LEFT_RIGHT,
+          new int[]{0xff000000, COLOR_GREY}));
     main_view.addView
     (buttons_view,
      new android.widget.LinearLayout.LayoutParams(
-       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 20));
+       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 30));
 
-    l = new android.widget.LinearLayout.LayoutParams(
+    lh = new android.widget.LinearLayout.LayoutParams(
       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
-
-    counter_text = new android.widget.TextView(this);
-    counter_text.setTextAlignment(android.view.View.TEXT_ALIGNMENT_GRAVITY);
-    counter_text.setGravity(android.view.Gravity.CENTER);
-    buttons_view.addView(counter_text, l);
-
-    start_text = new android.widget.TextView(this);
-    start_text.setTextAlignment(android.view.View.TEXT_ALIGNMENT_GRAVITY);
-    start_text.setGravity(android.view.Gravity.CENTER);
-    buttons_view.addView(start_text, l);
-
-    end_text = new android.widget.TextView(this);
-    end_text.setTextAlignment(android.view.View.TEXT_ALIGNMENT_GRAVITY);
-    end_text.setGravity(android.view.Gravity.CENTER);
-    buttons_view.addView(end_text, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SETFILE);
-    button.setText("Load...");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKSTART);
-    button.setText("|<");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKBACKWARDS);
-    button.setText("<<");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_PLAY);
-    button.setText(">");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKFORWARDS);
-    button.setText(">>");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_SEEKEND);
-    button.setText(">|");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_MARKSTART);
-    button.setText("Mark Start");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_MARKEND);
-    button.setText("Mark End");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_CLEARSTART);
-    button.setText("Clear Start");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
-
-    button = new android.widget.Button(this);
-    button.setId(BUTTONID_CLEAREND);
-    button.setText("Clear End");
-    button.setOnClickListener(this);
-    buttons_view.addView(button, l);
+    lw = new android.widget.LinearLayout.LayoutParams(
+      0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 1);
+      
+    counter_text = this.Build_Counter();
+    buttons_view.addView(counter_text, lh);
+    start_text = this.Build_Counter();
+    buttons_view.addView(start_text, lh);
+    end_text = this.Build_Counter();
+    buttons_view.addView(end_text, lh);
+    
+    buttons_view.addView
+    (this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), lh);
+    
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKBACKWARDS, "<<", COLOR_YELLOW), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_PLAY, ">", COLOR_GREEN), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), lw);
+    buttons_view.addView(buttons_panel, lh);
+    
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
+    buttons_view.addView(buttons_panel, lh);
+    
+    buttons_view.addView
+    (this.Build_Button(BUTTONID_MARKSTART, "Mark Start", COLOR_BLUE), lh);
+    buttons_view.addView
+    (this.Build_Button(BUTTONID_MARKEND, "Mark End", COLOR_BLUE), lh);
+    buttons_view.addView
+    (this.Build_Button(BUTTONID_CLEARSTART, "Clear Start", COLOR_CYAN), lh);
+    buttons_view.addView
+    (this.Build_Button(BUTTONID_CLEAREND, "Clear End", COLOR_CYAN), lh);
 
     return main_view;
   }
 
+  public android.widget.Button Build_Button(int id, String text, int colour)
+  {
+    android.widget.Button button;
+    
+    button = new android.widget.Button(this);
+    button.setId(id);
+    button.setText(text);
+    button.setTextColor(COLOR_WHITE);
+    if (colour!=0)
+      rs.android.ui.Util.Set_Button_Colour(button, colour);
+    button.setOnClickListener(this);
+    
+    return button;
+  }
+  
+  public android.widget.TextView Build_Counter()
+  {
+    android.widget.TextView counter_text;
+    
+    counter_text = new android.widget.TextView(this);
+    counter_text.setTextAlignment(android.view.View.TEXT_ALIGNMENT_GRAVITY);
+    counter_text.setGravity(android.view.Gravity.CENTER);
+    counter_text.setTextColor(COLOR_WHITE);
+    
+    return counter_text;
+  }
+  
   public android.os.Handler handler=new android.os.Handler()
   {
     @Override
@@ -396,6 +335,7 @@ android.content.DialogInterface.OnClickListener
       this.url = data.getString("url");
     }
 
+    //this.getWindow().getDecorView().setBackgroundColor(0xff000000);
     if (rs.android.ui.Util.Is_Landscape_Mode(this))
       this.setContentView(this.Build_Landscape_Layout());
     else
@@ -432,7 +372,7 @@ android.content.DialogInterface.OnClickListener
       this.handler.removeMessages(MSG_UPDATEUI);
   }
 
-  // player init events
+  // player init events ======================================================
   @Override
   public void onInitializationSuccess(
     com.google.android.youtube.player.YouTubePlayer.Provider p1, 
@@ -452,7 +392,7 @@ android.content.DialogInterface.OnClickListener
     else
     {
       this.player.setPlayerStyle(
-        com.google.android.youtube.player.YouTubePlayer.PlayerStyle.CHROMELESS);
+        com.google.android.youtube.player.YouTubePlayer.PlayerStyle.MINIMAL);
       this.player.cueVideo(this.url);
     }
   }
@@ -465,7 +405,7 @@ android.content.DialogInterface.OnClickListener
     android.util.Log.d("Main_Activity.onInitializationFailure()", "entry");
   }
 
-  // player state change events
+  // player state change events ===============================================
   @Override
   public void onLoading() 
   {
@@ -476,12 +416,10 @@ android.content.DialogInterface.OnClickListener
   public void onLoaded(String videoId) 
   {
     //android.util.Log.d("Main_Activity.onLoaded(" + videoId + ")", "entry");
-
     Set_Counter();
     Set_Start(this.start_millis);
     Set_End(this.end_millis);
-    if (this.saved_millis > 0)
-      this.player.play();
+    this.player.play();
   }
 
   @Override
@@ -510,14 +448,14 @@ android.content.DialogInterface.OnClickListener
   public void onError(
     com.google.android.youtube.player.YouTubePlayer.ErrorReason reason) 
   {
-    android.util.Log.d("Main_Activity.onError()", "entry");
+    //android.util.Log.d("Main_Activity.onError()", "entry");
     if (reason == com.google.android.youtube.player.YouTubePlayer.ErrorReason.UNEXPECTED_SERVICE_DISCONNECTION) 
     { 
       this.player = null;
     }
   }
 
-  // player playback events
+  // player playback events ===================================================
   @Override
   public void onPlaying() 
   {
@@ -551,7 +489,7 @@ android.content.DialogInterface.OnClickListener
     //android.util.Log.d("Main_Activity.onSeekTo()", "entry");
   }
 
-  // ui widget events
+  // ui widget events =======+================+================================
   public void onClick(android.view.View button)
   {
     if (this.player != null)
