@@ -39,6 +39,7 @@ android.content.DialogInterface.OnClickListener
   public android.widget.EditText url_input;
   public android.app.AlertDialog url_dialog;
   public String url;
+  com.google.android.gms.ads.AdView ad_view;
 
   public android.app.AlertDialog Build_URL_Dialog()
   {
@@ -54,15 +55,31 @@ android.content.DialogInterface.OnClickListener
     return builder.create();
   }
 
+  public com.google.android.gms.ads.AdView Build_Ad
+    (com.google.android.gms.ads.AdSize size)
+  {
+    com.google.android.gms.ads.AdView mAdView =
+      new com.google.android.gms.ads.AdView(this);
+    mAdView.setAdSize(size);
+    mAdView.setBackgroundColor(0xff000000);
+    mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+    //mAdView.setAdListener(new Ad_Listener());
+    
+    return mAdView;
+  }
+  
   public android.view.View Build_Portrait_Layout()
   {
     android.widget.LinearLayout main_view, buttons_view, control_panel;
-    android.widget.LinearLayout.LayoutParams l;
-
-    this.Build_PlayerView();
+    android.widget.LinearLayout.LayoutParams l, l2;
+    
+    this.player_view = this.Build_PlayerView();
+    this.ad_view=this.Build_Ad(com.google.android.gms.ads.AdSize.SMART_BANNER);
     
     l = new android.widget.LinearLayout.LayoutParams(
       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 1);
+    l2 = new android.widget.LinearLayout.LayoutParams(
+      0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0.5f);
       
     control_panel=new android.widget.LinearLayout(this);
     control_panel.setOrientation(android.widget.LinearLayout.VERTICAL);
@@ -83,7 +100,7 @@ android.content.DialogInterface.OnClickListener
     control_panel.addView
     (buttons_view,
      new android.widget.LinearLayout.LayoutParams(
-       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 0.5f));
 
     // seek buttons
     buttons_view = new android.widget.LinearLayout(this);
@@ -123,6 +140,12 @@ android.content.DialogInterface.OnClickListener
        
     main_view = new android.widget.LinearLayout(this);
     main_view.setOrientation(android.widget.LinearLayout.VERTICAL);
+    if (this.ad_view!=null)
+      main_view.addView
+        (this.ad_view,
+          new android.widget.LinearLayout.LayoutParams(
+          android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 
+          android.widget.LinearLayout.LayoutParams.WRAP_CONTENT));
     main_view.addView
     (player_view,
      new android.widget.LinearLayout.LayoutParams(
@@ -135,25 +158,43 @@ android.content.DialogInterface.OnClickListener
     return main_view;
   }
 
-  public void Build_PlayerView()
+  public com.google.android.youtube.player.YouTubePlayerView Build_PlayerView()
   {
-    this.player_view = 
+    com.google.android.youtube.player.YouTubePlayerView player_view;
+    
+    player_view = 
       new com.google.android.youtube.player.YouTubePlayerView(this);
     if (this.url != null)
-      this.player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
+      player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
+      
+    return player_view;
   }
 
   public android.view.View Build_Landscape_Layout()
   {
     android.widget.LinearLayout main_view, buttons_view, buttons_panel;
-    android.widget.LinearLayout.LayoutParams lh, lw;
+    android.widget.LinearLayout.LayoutParams lh, lw, lh2;
 
     main_view = new android.widget.LinearLayout(this);
     main_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-
-    this.Build_PlayerView();
+   
+    this.player_view = this.Build_PlayerView();
+    this.ad_view = this.Build_Ad(com.google.android.gms.ads.AdSize.BANNER);
+    
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.VERTICAL);
+    if (this.ad_view!=null)
+      buttons_panel.addView
+        (this.ad_view,
+          new android.widget.LinearLayout.LayoutParams
+            (android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 
+            android.widget.LinearLayout.LayoutParams.WRAP_CONTENT));
+    buttons_panel.addView
+     (this.player_view, 
+     new android.widget.LinearLayout.LayoutParams(
+     android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
     main_view.addView
-    (player_view,
+    (buttons_panel,
      new android.widget.LinearLayout.LayoutParams(
        0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 70));
 
@@ -170,18 +211,27 @@ android.content.DialogInterface.OnClickListener
 
     lh = new android.widget.LinearLayout.LayoutParams(
       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
+    lh2 = new android.widget.LinearLayout.LayoutParams(
+      android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 0.5f);
     lw = new android.widget.LinearLayout.LayoutParams(
       0, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 1);
-      
-    counter_text = this.Build_Counter();
-    buttons_view.addView(counter_text, lh);
-    start_text = this.Build_Counter();
-    buttons_view.addView(start_text, lh);
-    end_text = this.Build_Counter();
-    buttons_view.addView(end_text, lh);
     
-    buttons_view.addView
-    (this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), lh);
+    counter_text = this.Build_Counter();
+    buttons_view.addView(counter_text, lh2);
+    start_text = this.Build_Counter();
+    buttons_view.addView(start_text, lh2);
+    end_text = this.Build_Counter();
+    buttons_view.addView(end_text, lh2);
+
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
+    buttons_view.addView(buttons_panel, lh);
     
     buttons_panel = new android.widget.LinearLayout(this);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
@@ -192,23 +242,22 @@ android.content.DialogInterface.OnClickListener
     buttons_panel.addView
       (this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), lw);
     buttons_view.addView(buttons_panel, lh);
+
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_MARKSTART, "Mark Start", COLOR_BLUE), lw);
+    buttons_panel.addView
+      (this.Build_Button(BUTTONID_MARKEND, "Mark End", COLOR_BLUE), lw);
+    buttons_view.addView(buttons_panel, lh);
     
     buttons_panel = new android.widget.LinearLayout(this);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
+      (this.Build_Button(BUTTONID_CLEARSTART, "Clear Start", COLOR_CYAN), lw);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
+      (this.Build_Button(BUTTONID_CLEAREND, "Clear End", COLOR_CYAN), lw);
     buttons_view.addView(buttons_panel, lh);
-    
-    buttons_view.addView
-    (this.Build_Button(BUTTONID_MARKSTART, "Mark Start", COLOR_BLUE), lh);
-    buttons_view.addView
-    (this.Build_Button(BUTTONID_MARKEND, "Mark End", COLOR_BLUE), lh);
-    buttons_view.addView
-    (this.Build_Button(BUTTONID_CLEARSTART, "Clear Start", COLOR_CYAN), lh);
-    buttons_view.addView
-    (this.Build_Button(BUTTONID_CLEAREND, "Clear End", COLOR_CYAN), lh);
 
     return main_view;
   }
@@ -342,12 +391,18 @@ android.content.DialogInterface.OnClickListener
       this.setContentView(this.Build_Portrait_Layout());
 
     this.url_dialog = this.Build_URL_Dialog(); 
+    
+    if (this.ad_view!=null)
+      this.ad_view.loadAd
+        (new com.google.android.gms.ads.AdRequest.Builder().build());
   }
 
   @Override
   public void onResume()
   {
     super.onResume();
+    if (this.ad_view!=null)
+      this.ad_view.resume();
     //android.util.Log.d("Main_Activity.onResume()", "entry");
   }
 
@@ -365,11 +420,21 @@ android.content.DialogInterface.OnClickListener
   @Override
   public void onPause()
   {
+    if (this.ad_view!=null)
+      this.ad_view.pause();
     super.onPause();
 
     //android.util.Log.d("Main_Activity.onPause()", "entry");
     if (this.handler != null)
       this.handler.removeMessages(MSG_UPDATEUI);
+  }
+  
+  @Override
+  public void onDestroy() 
+  {
+    if (this.ad_view!=null)
+      this.ad_view.destroy();
+    super.onDestroy();
   }
 
   // player init events ======================================================
