@@ -28,18 +28,22 @@ android.content.DialogInterface.OnClickListener
   public static final int BUTTONID_CLEAREND=8;
   public static final int BUTTONID_SETFILE=9;
   public static final int BUTTONID_PLAY=10;
+  public static final int BUTTONID_SEEKFORWARDSFAR=11;
+  public static final int BUTTONID_SEEKBACKWARDSFAR=12;
 
-  public static final int MSG_CHKMARKEND=1;
+  //public static final int MSG_SEEKFORWARD=1;
   public static final int MSG_UPDATEUI=2;
+  
+  public static final int SEEK_STEP_MILLIS=4000;
 
-  public int start_millis=0, end_millis, saved_millis;
+  public int start_millis=0, end_millis, saved_millis, seek_far_millis; 
   public com.google.android.youtube.player.YouTubePlayerView player_view;
   public com.google.android.youtube.player.YouTubePlayer player;
   public android.widget.TextView counter_text, start_text, end_text;
   public android.widget.EditText url_input;
   public android.app.AlertDialog url_dialog;
   public String url;
-  com.google.android.gms.ads.AdView ad_view;
+  public com.google.android.gms.ads.AdView ad_view;
 
   public android.app.AlertDialog Build_URL_Dialog()
   {
@@ -73,7 +77,7 @@ android.content.DialogInterface.OnClickListener
     android.widget.LinearLayout main_view, buttons_view, control_panel;
     android.widget.LinearLayout.LayoutParams l, l2;
     
-    this.player_view = this.Build_PlayerView();
+    this.player_view = new com.google.android.youtube.player.YouTubePlayerView(this);
     this.ad_view=this.Build_Ad(com.google.android.gms.ads.AdSize.SMART_BANNER);
     
     l = new android.widget.LinearLayout.LayoutParams(
@@ -158,7 +162,7 @@ android.content.DialogInterface.OnClickListener
     return main_view;
   }
 
-  public com.google.android.youtube.player.YouTubePlayerView Build_PlayerView()
+  public com.google.android.youtube.player.YouTubePlayerView xBuild_PlayerView()
   {
     com.google.android.youtube.player.YouTubePlayerView player_view;
     
@@ -178,7 +182,7 @@ android.content.DialogInterface.OnClickListener
     main_view = new android.widget.LinearLayout(this);
     main_view.setOrientation(android.widget.LinearLayout.HORIZONTAL);
    
-    this.player_view = this.Build_PlayerView();
+    this.player_view = new com.google.android.youtube.player.YouTubePlayerView(this);
     this.ad_view = this.Build_Ad(com.google.android.gms.ads.AdSize.BANNER);
     
     buttons_panel = new android.widget.LinearLayout(this);
@@ -228,21 +232,29 @@ android.content.DialogInterface.OnClickListener
     buttons_panel.addView
       (this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), lw);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
+      (this.Build_Button(BUTTONID_PLAY, ">", COLOR_GREEN), lw);
+    buttons_view.addView(buttons_panel, lh);
+
+    buttons_panel = new android.widget.LinearLayout(this);
+    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
+    (this.Build_Button(BUTTONID_SEEKBACKWARDSFAR, "<<<", COLOR_YELLOW), lw);
+    buttons_panel.addView
+    (this.Build_Button(BUTTONID_SEEKBACKWARDS, "<<", COLOR_YELLOW), lw);
+    buttons_panel.addView
+    (this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), lw);
+    buttons_panel.addView
+    (this.Build_Button(BUTTONID_SEEKFORWARDSFAR, ">>>", COLOR_YELLOW), lw);
     buttons_view.addView(buttons_panel, lh);
     
     buttons_panel = new android.widget.LinearLayout(this);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKBACKWARDS, "<<", COLOR_YELLOW), lw);
+    (this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
     buttons_panel.addView
-      (this.Build_Button(BUTTONID_PLAY, ">", COLOR_GREEN), lw);
-    buttons_panel.addView
-      (this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), lw);
+    (this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
     buttons_view.addView(buttons_panel, lh);
-
+    
     buttons_panel = new android.widget.LinearLayout(this);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
     buttons_panel.addView
@@ -300,7 +312,7 @@ android.content.DialogInterface.OnClickListener
           player.seekToMillis(start_millis);
 
         Set_Counter();
-        this.sendEmptyMessageDelayed(MSG_UPDATEUI, 100);
+        this.sendEmptyMessageDelayed(MSG_UPDATEUI, 1000);
       }
     }
   };
@@ -321,6 +333,10 @@ android.content.DialogInterface.OnClickListener
     this.start_millis = millis;
     this.start_text.setText(
       Format_Time("Start at", this.start_millis, player));
+    if (millis==0)
+      this.start_text.setTextColor(COLOR_GREY);
+    else
+      this.start_text.setTextColor(COLOR_WHITE);
   }
 
   public void Set_End()
@@ -333,6 +349,10 @@ android.content.DialogInterface.OnClickListener
     this.end_millis = millis;
     this.end_text.setText(
       Format_Time("End at", this.end_millis, player));
+    if (millis==0)
+      this.end_text.setTextColor(COLOR_GREY);
+    else
+      this.end_text.setTextColor(COLOR_WHITE);
   }
 
   public String Format_Time(String postfix, int millis,
@@ -364,7 +384,67 @@ android.content.DialogInterface.OnClickListener
 
     return res;
   }
-
+  
+  public String Clean_URL(String url)
+  {
+    if (url.startsWith("https://youtu.be/"))
+      url = url.substring(17);
+      
+    return url;
+  }
+  
+  public void Toggle_Play()
+  {
+    if (player.isPlaying())
+      player.pause();
+    else
+      this.Play();
+  }
+  
+  public void Play()
+  {
+    this.Play(this.url);
+  }
+  
+  public void Play(String url)
+  {
+    if (url==null)
+    {
+      if (this.url!=null)
+    }
+    if (player == null)
+    {
+      this.url=url;
+      this.player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
+    }
+    else if (!url.equals(this.url))
+    {
+      this.url=url;
+      this.player.cueVideo(this.Clean_URL(url));
+    }
+    else
+      this.player.play();
+  }
+  
+  public void Seek_Forward(int millis)
+  {
+    int curr_millis;
+    
+    curr_millis=this.player.getCurrentTimeMillis();
+    if (this.end_millis != 0 && curr_millis + millis > this.end_millis)
+      this.player.seekToMillis(this.end_millis);
+    else
+      this.player.seekRelativeMillis(millis);
+  }
+  
+  public void Seek_Backward(int millis)
+  {
+    if (this.player.getCurrentTimeMillis() - millis < this.start_millis)
+      this.player.seekToMillis(this.start_millis);
+    else
+      this.player.seekRelativeMillis(-millis);
+  }
+  
   // activity lifecycle events ==============================================
   @Override
   public void onCreate(android.os.Bundle data) 
@@ -376,14 +456,6 @@ android.content.DialogInterface.OnClickListener
       android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     //android.util.Log.d("Main_Activity.onCreate()", "entry");
-    if (data != null)
-    {
-      this.start_millis = data.getInt("start_millis");
-      this.end_millis = data.getInt("end_millis");
-      this.saved_millis = data.getInt("saved_millis");
-      this.url = data.getString("url");
-    }
-
     //this.getWindow().getDecorView().setBackgroundColor(0xff000000);
     if (rs.android.ui.Util.Is_Landscape_Mode(this))
       this.setContentView(this.Build_Landscape_Layout());
@@ -400,12 +472,37 @@ android.content.DialogInterface.OnClickListener
   @Override
   public void onResume()
   {
+    String intent_text=null;
+    
     super.onResume();
+    
+    if (this.getIntent().getExtras()!=null)
+    {
+      intent_text=this.getIntent().getExtras().getString
+      (android.content.Intent.EXTRA_TEXT);
+    }
+    
+    this.Play(intent_text);
+      
     if (this.ad_view!=null)
       this.ad_view.resume();
     //android.util.Log.d("Main_Activity.onResume()", "entry");
   }
+  
+  @Override
+  public void onRestoreInstanceState(android.os.Bundle data) 
+  {
+    super.onRestoreInstanceState(data);
 
+    //if (data != null)
+    {
+      this.start_millis = data.getInt("start_millis");
+      this.end_millis = data.getInt("end_millis");
+      this.saved_millis = data.getInt("saved_millis");
+      this.url = data.getString("url");
+    }
+  }
+  
   @Override
   protected void onSaveInstanceState(android.os.Bundle data)
   {
@@ -444,7 +541,7 @@ android.content.DialogInterface.OnClickListener
     com.google.android.youtube.player.YouTubePlayer player, 
     boolean was_restored)
   {
-    //android.util.Log.d("Main_Activity.onInitializationSuccess()", "entry");
+    android.util.Log.d("Main_Activity.onInitializationSuccess()", "entry");
 
     this.player = player;
     this.player.setPlayerStateChangeListener(this);
@@ -452,7 +549,7 @@ android.content.DialogInterface.OnClickListener
 
     if (was_restored)
     {
-
+      android.util.Log.d("Main_Activity.onInitializationSuccess()", "was restored");
     }
     else
     {
@@ -481,6 +578,11 @@ android.content.DialogInterface.OnClickListener
   public void onLoaded(String videoId) 
   {
     //android.util.Log.d("Main_Activity.onLoaded(" + videoId + ")", "entry");
+    
+    this.seek_far_millis=this.player.getDurationMillis()/20;
+    if (this.seek_far_millis<SEEK_STEP_MILLIS)
+      this.seek_far_millis=SEEK_STEP_MILLIS;
+      
     Set_Counter();
     Set_Start(this.start_millis);
     Set_End(this.end_millis);
@@ -551,7 +653,7 @@ android.content.DialogInterface.OnClickListener
   @Override
   public void onSeekTo(int endPositionMillis) 
   {
-    //android.util.Log.d("Main_Activity.onSeekTo()", "entry");
+    //android.util.Log.d("Main_Activity.onSeekTo()", "seekto: "+endPositionMillis);
   }
 
   // ui widget events =======+================+================================
@@ -574,30 +676,19 @@ android.content.DialogInterface.OnClickListener
           this.player.seekToMillis(this.player.getDurationMillis());
       }
       else if (button.getId() == BUTTONID_SEEKFORWARDS)
-      {
-        if (this.end_millis != 0 && this.player.getCurrentTimeMillis() + 2000 > this.end_millis)
-          this.player.seekToMillis(this.end_millis);
-        else
-          this.player.seekRelativeMillis(2000);
-      }
+        this.Seek_Forward(SEEK_STEP_MILLIS);
       else if (button.getId() == BUTTONID_SEEKBACKWARDS)
-      {
-        if (this.player.getCurrentTimeMillis() - 2000 < this.start_millis)
-          this.player.seekToMillis(this.start_millis);
-        else
-          this.player.seekRelativeMillis(-2000);
-      }
+        this.Seek_Backward(SEEK_STEP_MILLIS);
       else if (button.getId() == BUTTONID_CLEARSTART)
         this.Set_Start(0);
       else if (button.getId() == BUTTONID_CLEAREND)
         Set_End(0);
       else if (button.getId() == BUTTONID_PLAY)
-      {
-        if (player.isPlaying())
-          player.pause();
-        else
-          player.play();
-      }
+        this.Toggle_Play();
+      else if (button.getId() == BUTTONID_SEEKFORWARDSFAR)
+        this.Seek_Forward(seek_far_millis);
+      else if (button.getId() == BUTTONID_SEEKBACKWARDSFAR)
+        this.Seek_Backward(seek_far_millis);
     }
 
     if (button.getId() == BUTTONID_SETFILE)
@@ -606,12 +697,6 @@ android.content.DialogInterface.OnClickListener
 
   public void onClick(android.content.DialogInterface dialog, int id) 
   {
-    url = url_input.getText().toString();
-    if (url.startsWith("https://youtu.be/"))
-      url = url.substring(17);
-    if (player == null)
-      this.player_view.initialize(rs.youtubebuddy.DeveloperKey.DEVELOPER_KEY, this);
-    else
-      this.player.cueVideo(url);
+    this.Play(url_input.getText().toString());
   }
 }
