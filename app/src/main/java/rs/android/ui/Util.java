@@ -436,7 +436,7 @@ public class Util
   }
   
   public static void Set_Button_Colour
-    (android.widget.Button button, Integer colour)
+    (android.view.View button, Integer colour)
   {
     android.graphics.PorterDuffColorFilter filter;
 
