@@ -36,23 +36,21 @@ implements android.view.View.OnClickListener
     
     video_panel = new android.widget.LinearLayout(this);
     video_panel.setOrientation(android.widget.LinearLayout.VERTICAL);
+    video_panel.addView
+    (this.player_view, 
+     new android.widget.LinearLayout.LayoutParams(
+       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
     if (this.ad_view!=null)
       video_panel.addView
         (this.ad_view,
           new android.widget.LinearLayout.LayoutParams
             (android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 
             android.widget.LinearLayout.LayoutParams.WRAP_CONTENT));
-    video_panel.addView
-     (this.player_view, 
-     new android.widget.LinearLayout.LayoutParams(
-     android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
     
     switch_button=new android.widget.ImageButton(this);
-    //switch_button.setText("Controls / Tags");
     switch_button.setImageResource(rs.youtubebuddy.R.drawable.ic_toc_white_24dp);
     switch_button.setOnClickListener(this);
     rs.android.ui.Util.Set_Button_Colour(switch_button, COLOR_GREY);
-    //switch_button.setTextColor(COLOR_WHITE);
     
     this.buttons_view=new Controls_View(this);
     this.buttons_view.player_view=this.player_view;

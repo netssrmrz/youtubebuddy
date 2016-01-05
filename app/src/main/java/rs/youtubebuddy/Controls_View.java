@@ -55,10 +55,6 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
     android.widget.LinearLayout.LayoutParams lh, lw, lh2;
     
     this.setOrientation(android.widget.LinearLayout.VERTICAL);
-    /*this.setBackground
-    (new android.graphics.drawable.GradientDrawable
-     (android.graphics.drawable.GradientDrawable.Orientation.LEFT_RIGHT,
-      new int[]{0xff000000, COLOR_GREY}));*/
       
     lh = new android.widget.LinearLayout.LayoutParams(
       android.widget.LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
@@ -76,58 +72,18 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
 
     buttons_panel = new android.widget.LinearLayout(ctx);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SETFILE, "Load", COLOR_RED), lw);
     buttons_panel.addView
     (this.Build_Image_Button
      (BUTTONID_SETFILE, 
       rs.youtubebuddy.R.drawable.ic_file_download_white_24dp, COLOR_RED), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_PLAY, ">", COLOR_GREEN), lw);
-    this.play_button=this.Build_Image_Button
-    (BUTTONID_PLAY, 
-     rs.youtubebuddy.R.drawable.ic_play_arrow_white_24dp, COLOR_GREEN);
-    buttons_panel.addView(this.play_button, lw);
-    this.addView(buttons_panel, lh);
-
-    buttons_panel = new android.widget.LinearLayout(ctx);
-    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKBACKWARDSFAR, "<<<", COLOR_YELLOW), lw);
-    buttons_panel.addView
-    (this.Build_Image_Button
-    (BUTTONID_SEEKBACKWARDSFAR, 
-    rs.youtubebuddy.R.drawable.ic_long_rewind_white_24dp, COLOR_YELLOW), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKBACKWARDS, "<<", COLOR_YELLOW), lw);
-    buttons_panel.addView
-    (this.Build_Image_Button
-     (BUTTONID_SEEKBACKWARDS, 
-      rs.youtubebuddy.R.drawable.ic_fast_rewind_white_24dp, COLOR_YELLOW), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKFORWARDS, ">>", COLOR_YELLOW), lw);
-    buttons_panel.addView
-    (this.Build_Image_Button
-     (BUTTONID_SEEKFORWARDS, 
-      rs.youtubebuddy.R.drawable.ic_fast_forward_white_24dp, COLOR_YELLOW), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKFORWARDSFAR, ">>>", COLOR_YELLOW), lw);
-    buttons_panel.addView
-    (this.Build_Image_Button
-     (BUTTONID_SEEKFORWARDSFAR, 
-      rs.youtubebuddy.R.drawable.ic_long_forward_white_24dp, COLOR_YELLOW), lw);
-    this.addView(buttons_panel, lh);
-
-    buttons_panel = new android.widget.LinearLayout(ctx);
-    buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKSTART, "|<", COLOR_YELLOW), lw);
     buttons_panel.addView
     (this.Build_Image_Button
      (BUTTONID_SEEKSTART, 
       rs.youtubebuddy.R.drawable.ic_skip_previous_white_24dp, COLOR_YELLOW), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_SEEKEND, ">|", COLOR_YELLOW), lw);
+    this.play_button=this.Build_Image_Button
+    (BUTTONID_PLAY, 
+     rs.youtubebuddy.R.drawable.ic_play_arrow_white_24dp, COLOR_GREEN);
+    buttons_panel.addView(this.play_button, lw);
     buttons_panel.addView
     (this.Build_Image_Button
      (BUTTONID_SEEKEND, 
@@ -136,30 +92,38 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
 
     buttons_panel = new android.widget.LinearLayout(ctx);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_MARKSTART, "Mark Start", COLOR_BLUE), lw);
     buttons_panel.addView
     (this.Build_Image_Button
-     (BUTTONID_MARKSTART, 
-      rs.youtubebuddy.R.drawable.ic_mark_start_white_24dp, COLOR_BLUE), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_MARKEND, "Mark End", COLOR_BLUE), lw);
+    (BUTTONID_SEEKBACKWARDSFAR, 
+    rs.youtubebuddy.R.drawable.ic_long_rewind_white_24dp, COLOR_YELLOW), lw);
     buttons_panel.addView
     (this.Build_Image_Button
-     (BUTTONID_MARKEND, 
-      rs.youtubebuddy.R.drawable.ic_mark_end_white_24dp, COLOR_BLUE), lw);
+     (BUTTONID_SEEKBACKWARDS, 
+      rs.youtubebuddy.R.drawable.ic_fast_rewind_white_24dp, COLOR_YELLOW), lw);
+    buttons_panel.addView
+    (this.Build_Image_Button
+     (BUTTONID_SEEKFORWARDS, 
+      rs.youtubebuddy.R.drawable.ic_fast_forward_white_24dp, COLOR_YELLOW), lw);
+    buttons_panel.addView
+    (this.Build_Image_Button
+     (BUTTONID_SEEKFORWARDSFAR, 
+      rs.youtubebuddy.R.drawable.ic_long_forward_white_24dp, COLOR_YELLOW), lw);
     this.addView(buttons_panel, lh);
 
     buttons_panel = new android.widget.LinearLayout(ctx);
     buttons_panel.setOrientation(android.widget.LinearLayout.HORIZONTAL);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_CLEARSTART, "Clear Start", COLOR_CYAN), lw);
+    buttons_panel.addView
+    (this.Build_Image_Button
+     (BUTTONID_MARKSTART, 
+      rs.youtubebuddy.R.drawable.ic_mark_start_white_24dp, COLOR_BLUE), lw);
+    buttons_panel.addView
+    (this.Build_Image_Button
+     (BUTTONID_MARKEND, 
+      rs.youtubebuddy.R.drawable.ic_mark_end_white_24dp, COLOR_BLUE), lw);
     buttons_panel.addView
     (this.Build_Image_Button
      (BUTTONID_CLEARSTART, 
       rs.youtubebuddy.R.drawable.ic_clear_start_white_24dp, COLOR_CYAN), lw);
-    //buttons_panel.addView
-    //(this.Build_Button(BUTTONID_CLEAREND, "Clear End", COLOR_CYAN), lw);
     buttons_panel.addView
     (this.Build_Image_Button
      (BUTTONID_CLEAREND, 
@@ -355,7 +319,10 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
 
     curr_millis=this.player.getCurrentTimeMillis();
     if (this.end_millis != 0 && curr_millis + millis > this.end_millis)
+    {
       this.player.seekToMillis(this.end_millis);
+      rs.android.ui.Util.Show_Note(this.getContext(), "End of segment reached.");
+    }
     else
       this.player.seekRelativeMillis(millis);
   }
@@ -363,7 +330,10 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
   public void Seek_Backward(int millis)
   {
     if (this.player.getCurrentTimeMillis() - millis < this.start_millis)
+    {
       this.player.seekToMillis(this.start_millis);
+      rs.android.ui.Util.Show_Note(this.getContext(), "Start of segment reached.");
+    }
     else
       this.player.seekRelativeMillis(-millis);
   }
@@ -373,12 +343,10 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
     if (player.isPlaying())
     {
       player.pause();
-      //this.play_button.setImageResource(rs.youtubebuddy.R.drawable.ic_play_arrow_white_24dp);
     }
     else
     {
       this.player.play();
-      //this.play_button.setImageResource(rs.youtubebuddy.R.drawable.ic_pause_white_24dp);
     }
   }
   
@@ -437,10 +405,6 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
         Set_Start();
       else if (button.getId() == BUTTONID_MARKEND)
         Set_End();
-      //else if (button.getId() == BUTTONID_MARKTAG)
-        //Set_Tag();
-      //else if (button.getId() == BUTTONID_GOTOTAG)
-        //Goto_Tag();
       else if (button.getId() == BUTTONID_SEEKSTART)
         Seek_Start();
       else if (button.getId() == BUTTONID_SEEKEND)
@@ -528,7 +492,6 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
     Set_Start(this.start_millis);
     Set_End(this.end_millis);
 
-    //android.util.Log.d("Main_Activity.onLoaded()", "saved_millis: "+saved_millis);
     if (this.saved_millis!=0)
       this.player.seekToMillis(this.saved_millis);
     this.player.play();
