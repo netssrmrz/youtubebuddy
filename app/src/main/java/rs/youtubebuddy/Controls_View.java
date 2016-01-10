@@ -191,14 +191,19 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
   }
   
   public String Format_Time(String postfix, int millis,
-                            com.google.android.youtube.player.YouTubePlayer player) 
+    com.google.android.youtube.player.YouTubePlayer player, boolean full) 
   {
     int seconds;
     int minutes;
     int hours;
-    String res=postfix;
+    String res;
     int max_millis=0;
 
+    if (postfix==null)
+      res="";
+    else
+      res=postfix;
+    
     seconds = millis / 1000;
     minutes = seconds / 60;
     hours = minutes / 60;
@@ -214,7 +219,8 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
       hours = minutes / 60;
       res += " / " + (hours == 0 ? "" : hours + ":")
         + String.format("%02d:%02d", minutes % 60, seconds % 60);
-      res += " (" + String.format("%.0f", (float)millis * 100f / (float)max_millis) + "%)";
+      if (full)
+        res += " (" + String.format("%.0f", (float)millis * 100f / (float)max_millis) + "%)";
     }
 
     return res;
@@ -252,7 +258,7 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
   public void Set_Counter()
   {
     counter_text.setText
-    (Format_Time("Now at", player.getCurrentTimeMillis(), player));
+    (Format_Time(null, player.getCurrentTimeMillis(), player, true));
   }
   
   public void Resume(android.content.Intent intent)
@@ -290,7 +296,7 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
   {
     this.start_millis = millis;
     this.start_text.setText(
-      Format_Time("Start at", this.start_millis, player));
+      Format_Time("Start at", this.start_millis, player, false));
     if (millis==0)
       this.start_text.setTextColor(COLOR_GREY);
     else
@@ -306,7 +312,7 @@ com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener
   {
     this.end_millis = millis;
     this.end_text.setText(
-      Format_Time("End at", this.end_millis, player));
+      Format_Time("End at", this.end_millis, player, false));
     if (millis==0)
       this.end_text.setTextColor(COLOR_GREY);
     else

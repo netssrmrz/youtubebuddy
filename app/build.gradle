@@ -8,7 +8,7 @@ android {
         applicationId "rs.youtubebuddy"
         minSdkVersion 14
         targetSdkVersion 14
-        versionCode 4
+        versionCode 7
         versionName "1.0"
     }
     buildTypes {

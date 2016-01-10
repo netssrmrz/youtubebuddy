@@ -21,7 +21,8 @@ implements android.view.View.OnClickListener
       new com.google.android.gms.ads.AdView(this);
     mAdView.setAdSize(size);
     mAdView.setBackgroundColor(0xff000000);
-    mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+    //mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+    mAdView.setAdUnitId("ca-app-pub-7012708134579766/7962504333");
     //mAdView.setAdListener(new Ad_Listener());
     
     return mAdView;
