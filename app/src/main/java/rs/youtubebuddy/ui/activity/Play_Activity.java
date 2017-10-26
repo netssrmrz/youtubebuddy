@@ -1,6 +1,10 @@
-package rs.youtubebuddy;
+package rs.youtubebuddy.ui.activity;
 
-public class Main_Activity
+import rs.youtubebuddy.Controls_View;
+import rs.youtubebuddy.Db;
+import rs.youtubebuddy.Tags_View;
+
+public class Play_Activity
 extends com.google.android.youtube.player.YouTubeBaseActivity
 implements android.view.View.OnClickListener
 {
