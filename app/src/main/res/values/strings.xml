@@ -2,6 +2,5 @@
 <resources>
 
     <string name="app_name">Tube Buddy</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string name="title_activity_main_">Ruedisima</string>
 </resources>
