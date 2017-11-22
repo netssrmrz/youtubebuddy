@@ -1,10 +1,6 @@
 package rs.android;
 
-import java.io.IOException;
 import java.util.Arrays;
-import android.content.*;
-import java.lang.reflect.*;
-import java.io.*;
 
 public class Util
 {
@@ -125,7 +121,7 @@ public class Util
         res=false;
       else if (obj instanceof android.database.sqlite.SQLiteDatabase && !((android.database.sqlite.SQLiteDatabase)obj).isOpen())
         res=false;
-      else if (obj instanceof Db && !NotEmpty(((Db)obj).conn))
+      else if (obj instanceof rs.android.db.Db && !NotEmpty(((rs.android.db.Db)obj).conn))
         res=false;
 			//else if (obj instanceof int[] && ((int[])obj).length<=0)
 			  //res=false;

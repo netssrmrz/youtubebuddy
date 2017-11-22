@@ -3,14 +3,15 @@
     package="rs.youtubebuddy">
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -27,7 +28,9 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data
                     android:host="www.youtube.com"
                     android:mimeType="text/*" />
@@ -39,11 +42,15 @@
             android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name=".ui.activity.Main_Activity"
-            android:label="@string/title_activity_main_">
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.Main_Activity2"
+            android:label="@string/title_activity_main">
         </activity>
     </application>
 

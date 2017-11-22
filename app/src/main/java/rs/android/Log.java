@@ -1,5 +1,4 @@
 package rs.android;
-import java.sql.*;
 
 public class Log
 {
@@ -16,14 +15,14 @@ public class Log
 	public String obj_data;
 	public Integer operation;
 
-	public static void Save_Restore(rs.android.Db db)
+	public static void Save_Restore(rs.android.db.Db db)
 	{
     //android.util.Log.d("Save_Restore()", "entry");
 		Log.Save(db, null, null, null, Log.OP_RESTORE);
 	}
 
-	public static void Save(rs.android.Db db, Long id, Object obj, Class<?> obj_class,
-	  int operation)
+	public static void Save(rs.android.db.Db db, Long id, Object obj, Class<?> obj_class,
+                          int operation)
 	{
 		Log l;
 
@@ -45,8 +44,8 @@ public class Log
     db.log = true;
 	}
 
-	public static boolean Has_Changes(rs.android.Db db, Class<?> obj_class, 
-	  java.sql.Date since)
+	public static boolean Has_Changes(rs.android.db.Db db, Class<?> obj_class,
+                                    java.sql.Date since)
 	{
 		boolean res=true;
 		String sql;

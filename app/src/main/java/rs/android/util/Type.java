@@ -394,7 +394,7 @@ public class Type
 
     if (obj!=null)
     {
-      for (java.lang.reflect.Field field: rs.android.Db.Get_Fields(obj.getClass()))
+      for (java.lang.reflect.Field field: rs.android.db.Db.Get_Fields(obj.getClass()))
       {
         try {field_val=field.get(obj);}
         catch (java.lang.Exception e) {field_val=null;}

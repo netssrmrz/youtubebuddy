@@ -1,7 +1,7 @@
 package rs.youtubebuddy;
 
 public class Db
-extends rs.android.Db
+extends rs.android.db.Db
 {
   public Db(android.content.Context context)
   {
@@ -15,7 +15,7 @@ extends rs.android.Db
 
     t=new Table();
     t.name="Tag";
-    t.update_type=rs.android.Db.Table.UPDATE_TYPE_NONE;
+    t.update_type= rs.android.db.Db.Table.UPDATE_TYPE_NONE;
     t.create_sql=
       "CREATE TABLE Tag (" +
       "id INTEGER PRIMARY KEY, " +

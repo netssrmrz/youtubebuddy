@@ -1,5 +1,4 @@
 package rs.android.ui;
-import java.util.*;
 
 public class Guage_View 
 extends android.view.View 
@@ -15,7 +14,7 @@ extends android.view.View
 	public int width, height;
 	public java.util.ArrayList<Bar> bars;
 	public boolean draw;
-	public rs.android.Db db;
+	public rs.android.db.Db db;
 
 	public Guage_View(android.content.Context context)
 	{

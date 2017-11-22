@@ -1,0 +1,279 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+MERGED from [com.google.android.gms:play-services-ads:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-10.2.1.aar\573f4eca11613ff1553cb9478e092fe5\AndroidManifest.xml:16:1-18:12
+MERGED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:2:1-19:12
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1b6c7c8e6a1c4c61f6d9a83e9a057588\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:16:1-28:12
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-10.2.1.aar\31a5db9093a7cab43d2d0033aa49d82d\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.1.aar\e65bc090d92d3b4c89c2bd21e0230eff\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-gass:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-gass-10.2.1.aar\97425468215219362768d9bd427e46c2\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.1.aar\a2c272d1220b1ab695737d1ebbb8e862\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\70933f42d781c62762dffde8654764ca\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.1.0.aar\c37dcdfd2716593ddabd31cd08a508f7\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.1.0.aar\de3f78f49f499c42ec7b31ad28f0ddb9\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\599b397ca406e4f37ee369fb85fea5bb\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\0af67effddbf3a0a33615937afcdede6\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\e516e90cf3a5add09696d012582cda61\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\1e3caedef82fabdb67a4c0f86dc20b4e\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\983eae64cf0919ac098717d8a5c3b5e3\AndroidManifest.xml:17:1-27:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+	package
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:3:5-30
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-ads:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-10.2.1.aar\573f4eca11613ff1553cb9478e092fe5\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-10.2.1.aar\573f4eca11613ff1553cb9478e092fe5\AndroidManifest.xml:17:5-43
+MERGED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1b6c7c8e6a1c4c61f6d9a83e9a057588\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1b6c7c8e6a1c4c61f6d9a83e9a057588\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-10.2.1.aar\31a5db9093a7cab43d2d0033aa49d82d\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-10.2.1.aar\31a5db9093a7cab43d2d0033aa49d82d\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.1.aar\e65bc090d92d3b4c89c2bd21e0230eff\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-10.2.1.aar\e65bc090d92d3b4c89c2bd21e0230eff\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-gass-10.2.1.aar\97425468215219362768d9bd427e46c2\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-gass-10.2.1.aar\97425468215219362768d9bd427e46c2\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.1.aar\a2c272d1220b1ab695737d1ebbb8e862\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.1.aar\a2c272d1220b1ab695737d1ebbb8e862\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\70933f42d781c62762dffde8654764ca\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\70933f42d781c62762dffde8654764ca\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.1.0.aar\c37dcdfd2716593ddabd31cd08a508f7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.1.0.aar\c37dcdfd2716593ddabd31cd08a508f7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.1.0.aar\de3f78f49f499c42ec7b31ad28f0ddb9\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.1.0.aar\de3f78f49f499c42ec7b31ad28f0ddb9\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\599b397ca406e4f37ee369fb85fea5bb\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\599b397ca406e4f37ee369fb85fea5bb\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\0af67effddbf3a0a33615937afcdede6\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\0af67effddbf3a0a33615937afcdede6\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\e516e90cf3a5add09696d012582cda61\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\e516e90cf3a5add09696d012582cda61\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\1e3caedef82fabdb67a4c0f86dc20b4e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\1e3caedef82fabdb67a4c0f86dc20b4e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\983eae64cf0919ac098717d8a5c3b5e3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\983eae64cf0919ac098717d8a5c3b5e3\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:7:9-38
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:6:9-35
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:19:5-66
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:12:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:13:22-77
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:14:5-71
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:14:22-68
+application
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:16:5-55:19
+MERGED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:11:5-17:19
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.1.0.aar\989df3d7eb6c008c291abae01b9c1573\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:19:5-25:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1b6c7c8e6a1c4c61f6d9a83e9a057588\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1b6c7c8e6a1c4c61f6d9a83e9a057588\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-10.2.1.aar\31a5db9093a7cab43d2d0033aa49d82d\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-10.2.1.aar\31a5db9093a7cab43d2d0033aa49d82d\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-gass:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-gass-10.2.1.aar\97425468215219362768d9bd427e46c2\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gass:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-gass-10.2.1.aar\97425468215219362768d9bd427e46c2\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.1.aar\a2c272d1220b1ab695737d1ebbb8e862\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.1.aar\a2c272d1220b1ab695737d1ebbb8e862\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\70933f42d781c62762dffde8654764ca\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\70933f42d781c62762dffde8654764ca\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.1.0.aar\c37dcdfd2716593ddabd31cd08a508f7\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.1.0.aar\c37dcdfd2716593ddabd31cd08a508f7\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.1.0.aar\de3f78f49f499c42ec7b31ad28f0ddb9\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.1.0.aar\de3f78f49f499c42ec7b31ad28f0ddb9\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\599b397ca406e4f37ee369fb85fea5bb\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\599b397ca406e4f37ee369fb85fea5bb\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\0af67effddbf3a0a33615937afcdede6\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\0af67effddbf3a0a33615937afcdede6\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\e516e90cf3a5add09696d012582cda61\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\e516e90cf3a5add09696d012582cda61\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\1e3caedef82fabdb67a4c0f86dc20b4e\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\1e3caedef82fabdb67a4c0f86dc20b4e\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\983eae64cf0919ac098717d8a5c3b5e3\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\983eae64cf0919ac098717d8a5c3b5e3\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:19:9-41
+	android:icon
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:18:9-45
+	android:allowBackup
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:17:9-35
+	android:theme
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:20:9-40
+meta-data#com.google.android.gms.version
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.1.aar\64080db34c6f51007a8fd5e6e4e5ae5f\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:22:13-58
+activity#rs.youtubebuddy.ui.activity.Play_Activity
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:25:9-38:20
+	android:screenOrientation
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:28:13-50
+	android:label
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:27:13-35
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:26:13-54
+intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:29:13-37:29
+action#android.intent.action.SEND
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:30:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:32:17-76
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:32:27-73
+data
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:34:17-36:49
+	android:host
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:35:21-51
+	android:mimeType
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:36:21-46
+activity#com.google.android.gms.ads.AdActivity
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:39:9-42:64
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:25:9-232
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:41:13-122
+	android:theme
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:42:13-61
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:40:13-65
+activity#rs.youtubebuddy.ui.activity.Main_Activity
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:43:9-50:20
+	android:label
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:45:13-56
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:44:13-54
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:46:13-49:29
+action#android.intent.action.MAIN
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:48:17-77
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:48:27-74
+activity#rs.youtubebuddy.ui.activity.Main_Activity2
+ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:51:9-54:20
+	android:label
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:53:13-56
+	android:name
+		ADDED from C:\projects\youtubebuddy\app\src\main\AndroidManifest.xml:52:13-55
+activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
+ADDED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:12:9-16:66
+	android:label
+		ADDED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:15:13-29
+	android:exported
+		ADDED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:14:13-37
+	android:theme
+		ADDED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:16:13-63
+	android:name
+		ADDED from [pub.devrel:easypermissions:0.3.0] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\easypermissions-0.3.0.aar\f72bc1bfb8361f22914ab4fd98dbaf3a\AndroidManifest.xml:13:13-86
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-auth-10.2.1.aar\88d9d46981be0a1b1eb2fcad4025f3c2\AndroidManifest.xml:24:18-63
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:26:9-131
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:26:92-129
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-10.2.1.aar\97f0b73b68ad9d0c7f35bba3caa172f3\AndroidManifest.xml:26:19-91
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] C:\Users\esteb\.gradle\caches\transforms-1\files-1.1\play-services-base-10.2.1.aar\ee3a6926395331edf4be6d50aabeb7d8\AndroidManifest.xml:19:19-85

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\59ebccf05668ae7174c22b03b0a6a4ce2a24aa46\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b2f2fdfcb68a83aea0c1c2750059485bd3a38dcb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\e1753f11a1aff15cc8e5da51e3d88b85e1916cb7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ccae50a6b99673b859886e73d4ecaa94ebc96c48\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\b72732527b01bbc210407fbb56c4dd99d45ca62d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c768de070e2257496aa6e8c077bcf01a525bd7a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\33a3d5db4f7b6b413d3ed2abb5426e38f7a1ac01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_20d9c29ef9bd244281d8f727d24545eee7ce7644\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_086580052a21da28aee9ba917386d1f37dfab92f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_5610208dd6546441847ace14e34dc2f350951d59\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\63f03025093e715dd8998763f415094db743a02c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c98c1df13e367324785e39c69a59c6fe5747f6a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\404b00eaca32bd8d44b89eaba52f30707b6e2eab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7d520cfa0ba8542cadbdb5ef0bd0240b2e3c66b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\59b8656da06d559ee799e19c9ac3fa00b7352dca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5486ae4416203d84bc2e7d575281fd9ce086271a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_5610208dd6546441847ace14e34dc2f350951d59\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_086580052a21da28aee9ba917386d1f37dfab92f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\f46accead3e6d1aa9296e34a39bf50a1ba39fbdb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_37bbd78b2ef53ccae525a953023fb7ad070aa5db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\012e8c3f8a3c3d12c1af2133944ca565c0e80091\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_87fe0e0402b20253a561dd199d8cae5e08ae1093\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_fe2f00efc3f362a9dc0ed9592401e469d217e46c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\0c45b9365cab66c3c6d11c32f4d4b7b345c8c633\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7c2d2fe2edd34d684a65067a14f3c4ecbfc04b62\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\350dfc9440eb35ca73e508c4064740ab9b673786\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28c8637d43b14fe7aa2dea3d0ee8f34881f0fb38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\libs\commons-io-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-io-2.4_edc5d4ca5485e4a5e00dcf147adfe5fd1f24ab4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\e1753f11a1aff15cc8e5da51e3d88b85e1916cb7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ccae50a6b99673b859886e73d4ecaa94ebc96c48\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\404b00eaca32bd8d44b89eaba52f30707b6e2eab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7d520cfa0ba8542cadbdb5ef0bd0240b2e3c66b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\33a3d5db4f7b6b413d3ed2abb5426e38f7a1ac01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_20d9c29ef9bd244281d8f727d24545eee7ce7644\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\0c45b9365cab66c3c6d11c32f4d4b7b345c8c633\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7c2d2fe2edd34d684a65067a14f3c4ecbfc04b62\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b0c036594db47a2a5c8b631d24030895adcb98ca">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_574c366d34fa3e8556d4102a52c231f9cf498fd7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\b72732527b01bbc210407fbb56c4dd99d45ca62d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c768de070e2257496aa6e8c077bcf01a525bd7a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\libs\commons-io-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-io-2.4_edc5d4ca5485e4a5e00dcf147adfe5fd1f24ab4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\8a5850cdce1af2bee3f03a60ba62c2fd5f45ed76\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_799aac2d01d55b03695faf702907da841000109e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\350dfc9440eb35ca73e508c4064740ab9b673786\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28c8637d43b14fe7aa2dea3d0ee8f34881f0fb38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\projects\youtubebuddy\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e1da4943c1edc39f2fafe1597f8bbac8ec31b83e">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_574c366d34fa3e8556d4102a52c231f9cf498fd7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_fe2f00efc3f362a9dc0ed9592401e469d217e46c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\9e38937c3214a10b29fd3d9ffa4b6e8f7cee0268\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d25fdf47ef940c7f482c450353aa11ae122d744\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\22a1f23b0167060f764b0ddde1be0ff01afcd920\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d80b5ee2c85464c9ee07ff8de852d3eb81c60436\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\8a5850cdce1af2bee3f03a60ba62c2fd5f45ed76\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_799aac2d01d55b03695faf702907da841000109e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\63f03025093e715dd8998763f415094db743a02c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c98c1df13e367324785e39c69a59c6fe5747f6a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\59ebccf05668ae7174c22b03b0a6a4ce2a24aa46\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b2f2fdfcb68a83aea0c1c2750059485bd3a38dcb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\59b8656da06d559ee799e19c9ac3fa00b7352dca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5486ae4416203d84bc2e7d575281fd9ce086271a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\f46accead3e6d1aa9296e34a39bf50a1ba39fbdb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_37bbd78b2ef53ccae525a953023fb7ad070aa5db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\012e8c3f8a3c3d12c1af2133944ca565c0e80091\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_87fe0e0402b20253a561dd199d8cae5e08ae1093\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\22a1f23b0167060f764b0ddde1be0ff01afcd920\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d80b5ee2c85464c9ee07ff8de852d3eb81c60436\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\esteb\.android\build-cache\9e38937c3214a10b29fd3d9ffa4b6e8f7cee0268\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="C:\projects\youtubebuddy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d25fdf47ef940c7f482c450353aa11ae122d744\classes.dex" />
+    </item>
+
+</items>

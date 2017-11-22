@@ -14,7 +14,7 @@ extends android.widget.Spinner
 		if (id != null)
 		{
 			this.setSelection(
-			  ((rs.android.ui.Db_Adapter)this.getAdapter()).
+			  ((rs.android.ui.adapter.Db_Adapter)this.getAdapter()).
 				Get_Item_Position(id));
 		}
 	}
@@ -25,7 +25,7 @@ extends android.widget.Spinner
 		Long res=null;
 
 		id = this.getSelectedItemId();
-		if (id == rs.android.ui.Db_Adapter.ID_NA)
+		if (id == rs.android.ui.adapter.Db_Adapter.ID_NA)
 			res = null;
 		else
 		  res = id;

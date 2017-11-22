@@ -25,7 +25,7 @@ android.app.Activity
 	 public static final int DLG_DEL_LAST=3;
 	 public static final int DLG_EVENT_DEL=4;*/
 
-	public rs.android.Db db;
+	public rs.android.db.Db db;
 	//public android.view.Menu options_menu;
 	//public boolean dlg_cancel;
 	//public android.app.Dialog curr_dlg;
@@ -299,7 +299,7 @@ android.app.Activity
 
 	}
 
-	public rs.android.Db On_Create_Db()
+	public rs.android.db.Db On_Create_Db()
 	{
 		return null;
 	}

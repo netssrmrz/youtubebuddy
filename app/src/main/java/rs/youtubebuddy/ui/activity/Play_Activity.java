@@ -1,9 +1,5 @@
 package rs.youtubebuddy.ui.activity;
 
-import rs.youtubebuddy.Controls_View;
-import rs.youtubebuddy.Db;
-import rs.youtubebuddy.Tags_View;
-
 public class Play_Activity
 extends com.google.android.youtube.player.YouTubeBaseActivity
 implements android.view.View.OnClickListener
@@ -13,9 +9,10 @@ implements android.view.View.OnClickListener
   
   public com.google.android.youtube.player.YouTubePlayerView player_view;
   public com.google.android.gms.ads.AdView ad_view;
-  public Db db;
-  public Controls_View buttons_view;
-  public Tags_View tags_view;
+  public rs.youtubebuddy.Db db;
+  public rs.youtubebuddy.ui.view.Controls_View buttons_view;
+  public rs.youtubebuddy.ui.view.Tags_View tags_view;
+  public rs.youtubebuddy.ui.view.Sections_View sections_view;
   public android.widget.ImageButton switch_button;
 
   public com.google.android.gms.ads.AdView Build_Ad
@@ -57,19 +54,25 @@ implements android.view.View.OnClickListener
     switch_button.setOnClickListener(this);
     rs.android.ui.Util.Set_Button_Colour(switch_button, COLOR_GREY);
     
-    this.buttons_view=new Controls_View(this);
+    this.buttons_view=new rs.youtubebuddy.ui.view.Controls_View(this);
     this.buttons_view.player_view=this.player_view;
-
-    this.tags_view=new Tags_View(this, this.db);
+  
+    this.tags_view=new rs.youtubebuddy.ui.view.Tags_View(this, this.db);
     this.tags_view.ctrls_view=this.buttons_view;
     this.tags_view.setVisibility(android.view.View.GONE);
     this.buttons_view.tags_view=this.tags_view;
+  
+    this.sections_view=new rs.youtubebuddy.ui.view.Sections_View(this, this.db);
+    this.sections_view.setVisibility(android.view.View.GONE);
+    //this.tags_view.ctrls_view=this.buttons_view;
+    //this.buttons_view.tags_view=this.tags_view;
     
     ctrltag_panel=new android.widget.LinearLayout(this);
     ctrltag_panel.setOrientation(android.widget.LinearLayout.VERTICAL);
     ctrltag_panel.addView(switch_button);
     ctrltag_panel.addView(buttons_view, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, android.widget.LinearLayout.LayoutParams.MATCH_PARENT);
     ctrltag_panel.addView(tags_view, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, android.widget.LinearLayout.LayoutParams.MATCH_PARENT);
+    ctrltag_panel.addView(sections_view, android.widget.LinearLayout.LayoutParams.MATCH_PARENT, android.widget.LinearLayout.LayoutParams.MATCH_PARENT);
     ctrltag_panel.setBackground
     (new android.graphics.drawable.GradientDrawable
      (android.graphics.drawable.GradientDrawable.Orientation.LEFT_RIGHT,
@@ -99,10 +102,8 @@ implements android.view.View.OnClickListener
       android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN,
       android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-    this.db=Db.New(this.db, this);
+    this.db= rs.youtubebuddy.Db.New(this.db, this);
     
-    //android.util.Log.d("Main_Activity.onCreate()", "entry");
-    //this.getWindow().getDecorView().setBackgroundColor(0xff000000);
     //if (rs.android.ui.Util.Is_Landscape_Mode(this))
       this.setContentView(this.Build_Landscape_Layout());
     //else
@@ -116,10 +117,9 @@ implements android.view.View.OnClickListener
   @Override
   public void onResume()
   {
-    //android.util.Log.d("Main_Activity.onResume()", "entry");
     super.onResume();
     
-    this.db=Db.New(this.db, this);
+    this.db= rs.youtubebuddy.Db.New(this.db, this);
     this.buttons_view.db=this.db;
       
     this.buttons_view.Resume(this.getIntent());
@@ -171,7 +171,9 @@ implements android.view.View.OnClickListener
       this.ad_view.destroy();
     super.onDestroy();
   }
-  
+
+  // Events =================================================================
+
   public void onClick(android.view.View view)
   {
     if (this.buttons_view.getVisibility()==android.view.View.VISIBLE)
